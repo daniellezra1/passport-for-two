@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~hamburgers/_sass/hamburgers/hamburgers.scss';
+
+* {
+    box-sizing: border-box;
+    font-family: NunitoSans;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      &::-webkit-scrollbar-track {
+          border-radius: 5px;
+          background: rgb(104, 104, 104, 0.1);
+      }
+      &::-webkit-scrollbar-thumb {
+          border-radius: 5px;
+          background: #807974;
+      }
+}
+

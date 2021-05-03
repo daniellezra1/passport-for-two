@@ -1,0 +1,11 @@
+<div class="home">
+    <div class="title">
+        <h1>Passport For Two</h1>
+        <h3>By Danielle & Oran Tal</h3>    
+    </div>
+</div>
+<filter (onSelect)="filterPostList($event)"></filter>
+<div class="main">
+    <post-list class="post-list" [postList]="selectedPostList"></post-list>
+    <info-list class="info-list" [postList]="latestPosts"></info-list>
+</div>

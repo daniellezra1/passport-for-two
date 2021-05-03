@@ -1,0 +1,30 @@
+<div class="filter">
+    <div class="filter-option" (click)="select()">
+        <div class="filter-img"></div>
+        <div class="filter-title">Latest Posts</div>
+    </div>
+    <div class="filter-option" (click)="select('usa')">
+        <div class="filter-img" [ngClass]="{'active': topic === 'usa'}"></div>
+        <div class="filter-title">USA</div>
+    </div>
+    <div class="filter-option" (click)="select('hawaii')">
+        <div class="filter-img" [ngClass]="{'active': topic === 'hawaii'}"></div>
+        <div class="filter-title">Hawaii</div>
+    </div>
+    <div class="filter-option" (click)="select('africa')">
+        <div class="filter-img" [ngClass]="{'active': topic === 'africa'}"></div>
+        <div class="filter-title">South Africa</div>
+    </div>
+    <div class="filter-option" (click)="select('kenya')">
+        <div class="filter-img" [ngClass]="{'active': topic === 'kenya'}"></div>
+        <div class="filter-title">Kenya</div>
+    </div>
+    <div class="filter-option" (click)="select('greace')">
+        <div class="filter-img" [ngClass]="{'active': topic === 'greace'}"></div>
+        <div class="filter-title">Greace</div>
+    </div>
+    <div class="filter-option" (click)="select('israel')">
+        <div class="filter-img" [ngClass]="{'active': topic === 'israel'}"></div>
+        <div class="filter-title">Israel</div>
+    </div>
+</div>

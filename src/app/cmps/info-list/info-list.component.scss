@@ -1,0 +1,201 @@
+.info-list {
+    .title {
+        color: #ffffff;
+        background-color: #0a0a0a;
+        line-height: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 10px;
+        text-align: center;
+        margin-bottom: 25px;
+        padding: 10px 0;
+        font-family: 'Open_Sans', sans-serif;
+        font-weight: 400;
+    }
+    .info {
+        text-align: center;
+        margin-bottom: 25px;
+        .about-img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        p {
+            direction: rtl;
+            font-family: 'Heebo';
+            margin: 1px 0;
+            letter-spacing: .5px;
+        }
+        button {
+            text-decoration: none;
+            text-transform: uppercase;
+            line-height: 18px;
+            font-size: 11px;
+            padding: 8px 26px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: 1px solid #757575;
+            color: #757575;
+            background-color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: inline-block;
+            &:hover {
+                background-color: #0a0a0a;
+                color: #ffffff;
+                transition: .3s;
+            }
+        }
+    }
+    .latest-posts {
+        width: 100%;
+        margin-bottom: 25px;
+        .post {
+            cursor: pointer;
+            margin: 10px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            div  {
+                font-family: 'Josefin';
+                color: #0a0a0a;
+                &.date {
+                    font-family: 'Open Sans',sans-serif;
+                    color: #757575;    
+                    font-size: 13px;        
+                }
+            }
+            font-family: 'Josefin';
+            img {
+                width: 40%;
+                margin-right: 10px;
+            }
+        }
+
+    }
+    .instagram {
+        margin-bottom: 25px;
+        iframe {
+            height: 275px;
+
+        }
+    }
+    .follow-us {
+        margin-bottom: 10px;
+    }
+    .follow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        a {
+            text-decoration: none;
+            color: #658849;
+            &:active {
+                color: #658849;
+            }
+        }
+        button {
+            border: none;
+            text-align: center;
+            padding: 0;
+            margin-top: 5px;
+            background-color: transparent;
+            margin-left: 5px;
+            .icon {
+                font-size: 30px;
+                color: #658849;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 760px) {
+    .info-list {
+        .instagram {
+            margin-bottom: 0;
+            iframe {
+                height: 700px;
+
+            }
+        }
+    }
+  }
+
+  @media (max-width: 670px) {
+    .info-list {
+        .instagram {
+            iframe {
+                height: 620px;
+
+            }
+        }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .info-list {
+        .instagram {
+            iframe {
+                height: 550px;
+
+            }
+        }
+    }
+  }
+
+  @media (max-width: 550px) {
+    .info-list {
+        .instagram {
+            iframe {
+                height: 500px;
+
+            }
+        }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .info-list {
+        .instagram {
+            iframe {
+                height: 450px;
+
+            }
+        }
+    }
+  }
+
+  @media (max-width: 450px) {
+    .info-list {
+        .instagram {
+            iframe {
+                height: 400px;
+
+            }
+        }
+    }
+  }
+
+
+  @media (max-width: 400px) {
+    .info-list {
+        .instagram {
+            iframe {
+                height: 350px;
+
+            }
+        }
+    }
+  }
+
+  @media (max-width: 350px) {
+    .info-list {
+        .instagram {
+            iframe {
+                height: 300px;
+
+            }
+        }
+    }
+  }

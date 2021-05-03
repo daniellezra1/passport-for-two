@@ -1,0 +1,91 @@
+.home {
+    width: 100vw;
+    margin-top: 48px;
+    background: url('../../../assets/pic/main/main2.jpg');
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .title {
+        position: absolute;
+        h1, h3 {
+            font-family: 'Josefin';
+        }
+        h1 {
+            text-shadow: 0 2px 4px rgb(0 0 0 / 80%);
+            margin-bottom: 10px;
+        }
+        h3 {
+            text-shadow: 0 2px 4px rgb(0 0 0 / 80%);
+            margin-top: 10px;
+        }
+        color: #f4f3ef;
+        font-size: 20px;
+        text-shadow: 0 2px 4px rgb(0 0 0 / 30%);
+        text-align: center;
+        display: inline-block;
+    }
+}
+
+.main {
+    max-width: 1150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0;
+    margin: auto;
+    .post-list {
+        padding-right: 15px;
+        width: 75%;
+    }
+    .info-list {
+        padding-left: 15px;
+        width: 25%;
+    }
+    
+}
+
+@media (max-width: 1210px) {
+    .home {
+        height: 500px;
+    }
+}
+
+@media (max-width: 1090px) {
+    .home {
+        height: 450px;
+    }
+}
+
+@media (max-width: 985px) {
+    .home {
+        height: 350px;
+    }
+}
+
+
+
+@media (max-width: 760px) {
+    .home {
+        height: 400px;
+        .title {
+            bottom: 10px;
+        }
+    }
+    .main {
+        // padding-top: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .post-list,
+        .info-list {
+            padding-right: 0;
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+}

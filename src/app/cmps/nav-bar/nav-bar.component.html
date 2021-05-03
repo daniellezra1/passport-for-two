@@ -1,0 +1,18 @@
+<nav id="nav-bar">
+    <div class="title-in-mobile"><a routerLink="/">Passport For Two</a></div>
+    <button class="hamburger hamburger--spin" [ngClass]="{'is-active': isMenuOpen}" type="button" (click)="toggleMenu()">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    <div class="container nav-list" [ngClass]="{'is-active': isMenuOpen}">
+        <ul>
+            <li><a routerLink="/">HOME</a></li>
+            <li><a routerLink="/about" routerLinkActive="route-active">ABOUT</a></li>
+            <li><a routerLink="/blog" routerLinkActive="route-active">BLOG</a></li>
+            <li><a routerLink="/contact" routerLinkActive="route-active">CONTACT</a></li>
+        </ul>
+        <ul>
+        </ul>
+    </div>
+</nav>

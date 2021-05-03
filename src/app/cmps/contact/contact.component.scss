@@ -1,0 +1,38 @@
+.footer {
+    text-align: center;
+    padding-top: 20px;
+    width: 100vw;
+    height: 120px;
+    background-color: #f4f3ef;
+    .rights {
+        margin-top: 5px;
+        color: #658849;
+        font-size: 12px;
+    }
+    .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            font-family: 'Josefin';            text-decoration: none;
+            color: #658849;
+            &:active {
+                color: #658849;
+            }
+            &:hover {
+                color: #a7c09d;
+            }
+        }
+        button {
+            margin-right: 5px;
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            .icon {
+                font-size: 20px;
+                color: #658849;
+            }
+        }
+    }
+
+}

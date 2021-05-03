@@ -1,0 +1,14 @@
+<div class="post">
+    <img [src]="post.mainImg" />
+    <div class="header">
+        <div class="tags">
+            <span class="tag" *ngFor="let tag of post.tags; let i = index">{{tag}}
+                <span *ngIf="i !== post.tags.length - 1"> / </span>
+            </span>
+        </div>
+        <a class="title">{{post.title}}</a>
+        <div class="date">{{post.date | date:'mediumDate'}}</div>
+    </div>
+    <p class="text">{{post.content[0].text}}</p>
+    <button (click)="goToPost(post.id)">READ MORE</button>
+</div>

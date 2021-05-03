@@ -1,0 +1,130 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+  
+  @font-face {
+    font-family: NunitoSans;
+    src: url(../assets/fonts/NunitoSans/NunitoSans-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: Pacifico;
+    src: url(../assets/fonts/Pacifico/Pacifico-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: Handlee;
+    src: url(../assets/fonts/Handlee/Handlee-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Josefin;
+    src: url(../assets/fonts/Josefin_Sans/static/JosefinSans-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url(../assets/fonts/Open_Sans/OpenSans-Light.ttf);
+  }
+
+  @font-face {
+    font-family: 'Rounded';
+    src: url(../assets/fonts/Rounded/MPLUSRounded1c-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: 'Heebo';
+    src: url(../assets/fonts/Heebo//static/Heebo-Light.ttf);
+  }
+  
+  * {
+      box-sizing: border-box;
+      font-family: 'Josefin';
+  }
+
+  
+  body {
+      margin: 0;
+      overflow-x: hidden;
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 5px;
+            background: rgb(104, 104, 104, 0.1);
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: #807974;
+        }
+  }
+
+.instegram-pics {
+   background-color: #f4f3ef;
+   iframe {
+     height: 250px;
+   }
+}
+
+@media (max-width: 2000px) {
+  .instegram-pics {
+    iframe {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 1750px) {
+  .instegram-pics {
+    iframe {
+      height: 175px;
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .instegram-pics {
+    iframe {
+      height: 160px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .instegram-pics {
+    iframe {
+      height: 140px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .instegram-pics {
+    iframe {
+      height: 120px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .instegram-pics {
+    iframe {
+      height: 90px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .instegram-pics {
+    iframe {
+      height: 80px;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .instegram-pics {
+    display: none;
+  }
+}

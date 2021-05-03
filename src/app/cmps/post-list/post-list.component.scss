@@ -1,0 +1,28 @@
+.blog-page {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.coming-son {
+    text-align: center;
+    font-family: 'Open Sans',sans-serif;
+    color: #757575;
+
+}
+
+@media (max-width: 900px) {
+    .blog-page {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-page {
+        grid-template-columns: 1fr;
+    }
+}

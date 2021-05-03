@@ -1,0 +1,6 @@
+<div class="blog-page">
+    <filter (onSelect)="filterPostList($event)"></filter>
+    <div class="post-list">
+        <post-list [postList]="selectedPostList" [isBlogPage]="'true'"></post-list>
+    </div>
+</div>
