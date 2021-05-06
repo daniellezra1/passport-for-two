@@ -1,15 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Post } from './models/post';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
+  private dbPath = '/posts';
+  postsRef: AngularFirestoreCollection<[]> = null;
 
-  constructor(private http: HttpClient) { }
-
-  getPosts() {
-    const route = 'https://webitapimanagment.azure-api.net/awaiting';
-    return this.http.request('GET', route)
-}
+  constructor(db: AngularFirestore) {
+    this.postsRef = db.collection(this.dbPath);
+  }
+  getPosts(): AngularFirestoreCollection {
+    return this.postsRef;
+  }
+  getPost(id) {
+    return this.postsRef.doc(id);
+  }
 }

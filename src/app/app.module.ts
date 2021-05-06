@@ -15,16 +15,9 @@ import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PostPageComponent } from './cmps/post-page/post-page.component';
 import { ContactPageComponent } from './cmps/contact-page/contact-page.component';
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDsePBEJE_1mg-MKxTGHPA6Yv-DS6iXdck",
-//   authDomain: "passport-for-two.firebaseapp.com",
-//   projectId: "passport-for-two",
-//   storageBucket: "passport-for-two.appspot.com",
-//   messagingSenderId: "676540017401",
-//   appId: "1:676540017401:web:88365ae570c7e406721028",
-//   measurementId: "G-8PGBSRB1ET"
-// };
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -45,7 +38,9 @@ import { ContactPageComponent } from './cmps/contact-page/contact-page.component
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

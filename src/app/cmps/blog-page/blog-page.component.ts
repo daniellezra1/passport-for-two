@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/app.service';
+import { map } from 'rxjs/operators'
+import { Post } from '../../models/post'
 
 @Component({
   selector: 'blog-page',
@@ -6,107 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-page.component.scss']
 })
 export class BlogPageComponent implements OnInit {
-  selectedPostList;
-  postList = [
-    {
-      id: 1,
-      title: 'Must Visit Beaches',
-      content: [
-        {
-          title: null,
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim, quis euismod enim lacinia nec. Phasellus quam diam, semper in erat eu, efficitur molestie purus. Sed a elementum mi. Sed interdum mattis risus, sit amet eleifend ligula luctus ut. Sed ullamcorper lorem aliquam, tincidunt lorem et, ultrices est. Suspendisse eleifend dui odio, id volutpat quam iaculis eu. Nunc sit amet scelerisque mauris. Phasellus volutpat mauris ac sem tincidunt,…  ',
-          images: []
-        }
-      ],
-      date: new Date(),
-      tags: ['usa', 'america', 'neture'],
-      mainImg: '../../../assets/pic/main/main.jpg',
-    },
-    {
-      id: 2,
-      title: 'Must Visit Beaches',
-      content: [
-        {
-          title: null,
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim, quis euismod enim lacinia nec. Phasellus quam diam, semper in erat eu, efficitur molestie purus. Sed a elementum mi. Sed interdum mattis risus, sit amet eleifend ligula luctus ut. Sed ullamcorper lorem aliquam, tincidunt lorem et, ultrices est. Suspendisse eleifend dui odio, id volutpat quam iaculis eu. Nunc sit amet scelerisque mauris. Phasellus volutpat mauris ac sem tincidunt,…  ',
-          images: [
-            {url: '', title: ''}
-          ]
-        }
-      ],
-      date: new Date(),
-      tags: ['usa', 'america', 'neture'],
-      mainImg: '../../../assets/pic/main/main.jpg',
+  postList = [];
+  selectedPostList: Post[];
 
-    },
-    {
-      id: 3,
-      title: 'Must Visit Beaches',
-      content: [
-        {
-          title: null,
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim, quis euismod enim lacinia nec. Phasellus quam diam, semper in erat eu, efficitur molestie purus. Sed a elementum mi. Sed interdum mattis risus, sit amet eleifend ligula luctus ut. Sed ullamcorper lorem aliquam, tincidunt lorem et, ultrices est. Suspendisse eleifend dui odio, id volutpat quam iaculis eu. Nunc sit amet scelerisque mauris. Phasellus volutpat mauris ac sem tincidunt,…  ',
-          images: []
-        }
-      ],
-      date: new Date(),
-      tags: ['usa', 'america', 'neture'],
-      mainImg: '../../../assets/pic/main/main.jpg',
-
-    },
-    {
-      id: 1,
-      title: 'Must Visit Beaches',
-      content: [
-        {
-          title: null,
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim, quis euismod enim lacinia nec. Phasellus quam diam, semper in erat eu, efficitur molestie purus. Sed a elementum mi. Sed interdum mattis risus, sit amet eleifend ligula luctus ut. Sed ullamcorper lorem aliquam, tincidunt lorem et, ultrices est. Suspendisse eleifend dui odio, id volutpat quam iaculis eu. Nunc sit amet scelerisque mauris. Phasellus volutpat mauris ac sem tincidunt,…  ',
-          images: []
-        }
-      ],
-      date: new Date(),
-      tags: ['usa', 'america', 'neture'],
-      mainImg: '../../../assets/pic/main/main.jpg',
-    },
-    {
-      id: 2,
-      title: 'Must Visit Beaches',
-      content: [
-        {
-          title: null,
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim, quis euismod enim lacinia nec. Phasellus quam diam, semper in erat eu, efficitur molestie purus. Sed a elementum mi. Sed interdum mattis risus, sit amet eleifend ligula luctus ut. Sed ullamcorper lorem aliquam, tincidunt lorem et, ultrices est. Suspendisse eleifend dui odio, id volutpat quam iaculis eu. Nunc sit amet scelerisque mauris. Phasellus volutpat mauris ac sem tincidunt,…  ',
-          images: [
-            {url: '', title: ''}
-          ]
-        }
-      ],
-      date: new Date(),
-      tags: ['usa', 'america', 'neture'],
-      mainImg: '../../../assets/pic/main/main.jpg',
-
-    },
-    {
-      id: 3,
-      title: 'Must Visit Beaches',
-      content: [
-        {
-          title: null,
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim, quis euismod enim lacinia nec. Phasellus quam diam, semper in erat eu, efficitur molestie purus. Sed a elementum mi. Sed interdum mattis risus, sit amet eleifend ligula luctus ut. Sed ullamcorper lorem aliquam, tincidunt lorem et, ultrices est. Suspendisse eleifend dui odio, id volutpat quam iaculis eu. Nunc sit amet scelerisque mauris. Phasellus volutpat mauris ac sem tincidunt,…  ',
-          images: []
-        }
-      ],
-      date: new Date(),
-      tags: ['usa', 'america', 'neture'],
-      mainImg: '../../../assets/pic/main/main.jpg',
-
-    }
-
-  ]
-
-  constructor() { }
+  constructor(private service: AppService) { }
 
   ngOnInit(): void {
-    this.selectedPostList = this.postList
+    this.service.getPosts().snapshotChanges()
+    .pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(res => {
+      this.postList = res;
+      this.selectedPostList = this.postList
+    });
   }
 
   filterPostList(e) {
