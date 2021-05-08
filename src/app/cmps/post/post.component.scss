@@ -1,4 +1,6 @@
 .post {
+    margin-left: 20px;
+    margin-right: 20px;
     direction: rtl;
     text-align: center;
     border-bottom: 1px solid #e4e4e4;
@@ -60,4 +62,11 @@
             transition: .3s;
         }
     }
+}
+
+@media (max-width: 700px) {
+    .post {
+        margin-left: 0;
+        margin-right: 0;
+        }
 }

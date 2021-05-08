@@ -24,8 +24,7 @@ export class HomeComponent implements OnInit {
         )
       )
     ).subscribe(res => {
-      console.log(res)
-      this.postList = res;
+      this.postList = [res[5], res[1], res[2], res[6]];
       this.selectedPostList = this.postList
       this.latestPosts = this.postList.filter((post, index) => index < 3)
     });

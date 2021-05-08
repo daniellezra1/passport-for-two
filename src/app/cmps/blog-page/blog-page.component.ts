@@ -23,7 +23,7 @@ export class BlogPageComponent implements OnInit {
         )
       )
     ).subscribe(res => {
-      this.postList = res;
+      this.postList = [res[5], res[1], res[2], res[6]];
       this.selectedPostList = this.postList
     });
   }
@@ -31,7 +31,7 @@ export class BlogPageComponent implements OnInit {
   filterPostList(e) {
     if (e) {
       this.selectedPostList = this.postList.filter(post => {
-        return post.tags.find(tag => tag === e)
+        return post.tags?.find(tag => tag === e)
       })
     } else {
       this.selectedPostList = this.postList;

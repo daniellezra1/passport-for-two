@@ -23,6 +23,14 @@
         <div class="filter-img" [ngClass]="{'active': topic === 'greace'}"></div>
         <div class="filter-title">Greace</div>
     </div>
+    <div class="filter-option" (click)="select('mexico')">
+        <div class="filter-img" [ngClass]="{'active': topic === 'mexico'}"></div>
+        <div class="filter-title">Mexico</div>
+    </div>
+    <div class="filter-option" (click)="select('dubai')">
+        <div class="filter-img" [ngClass]="{'active': topic === 'dubai'}"></div>
+        <div class="filter-title">Dubai</div>
+    </div>
     <div class="filter-option" (click)="select('israel')">
         <div class="filter-img" [ngClass]="{'active': topic === 'israel'}"></div>
         <div class="filter-title">Israel</div>
