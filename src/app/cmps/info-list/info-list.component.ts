@@ -25,4 +25,5 @@ export class InfoListComponent {
   goToPost(id) {
     this.router.navigate([`/post/${id}`])
   }
+
 }
