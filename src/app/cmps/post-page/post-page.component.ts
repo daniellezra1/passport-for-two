@@ -22,7 +22,6 @@ export class PostPageComponent implements OnInit {
     .pipe(map(c =>({ id: c.payload.id, ...c.payload.data()})))
     .subscribe(res => {
       this.post = res;
-      console.log(this.post)
     });
   }
 
