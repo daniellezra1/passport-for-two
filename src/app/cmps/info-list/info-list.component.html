@@ -20,8 +20,8 @@
                 <div class="post" (click)="goToPost(post.id)">
                     <img [src]="post.mainImg" />
                     <div>
-                        <div>{{post.title}}</div>
-                        <div class="date">{{post.date | date:'mediumDate'}}</div>    
+                        <div class="post-title">{{post.title}}</div>
+                        <div class="post-date">{{post.date | date:'mediumDate'}}</div>    
                     </div>
                 </div>
             </ng-container>

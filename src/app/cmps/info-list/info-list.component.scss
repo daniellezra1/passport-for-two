@@ -57,15 +57,18 @@
             flex-direction: row;
             align-items: center;
             div  {
-                font-family: 'Josefin';
+                font-family: 'Open Sans',sans-serif;
                 color: #0a0a0a;
-                &.date {
+                &.post-title {
+                    font-family: 'Heebo';
+                }
+                &.post-date {
                     font-family: 'Open Sans',sans-serif;
                     color: #757575;    
                     font-size: 13px;        
                 }
             }
-            font-family: 'Josefin';
+            // font-family: 'Josefin';
             img {
                 width: 40%;
                 margin-left: 10px;
