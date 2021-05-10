@@ -17,11 +17,11 @@
         <div class="title">latest posts</div>
         <div class="latest-posts">
             <ng-container *ngFor="let post of postList; let i = index">
-                <div class="post" (click)="goToPost(post.id)">
-                    <img [src]="post.mainImg" />
+                <div class="post" (click)="goToPost(post?.id)">
+                    <img [src]="post?.mainImg" />
                     <div>
-                        <div class="post-title">{{post.title}}</div>
-                        <div class="post-date">{{post.date | date:'mediumDate'}}</div>    
+                        <div class="post-title">{{post?.title}}</div>
+                        <div class="post-date">{{post?.date | date:'mediumDate'}}</div>    
                     </div>
                 </div>
             </ng-container>
