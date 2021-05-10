@@ -9,9 +9,9 @@
         <h1 class="title">{{post.title}}</h1>
         <div class="date">{{post.date | date:'mediumDate'}}</div>
         <div *ngFor="let content of post?.content" class="text">
-            <p class="content-title">{{content.title}}</p>
-            <p [ngClass]="{'list': content.secondTitle}"><span *ngIf="content.secondTitle">{{content.secondTitle}} - </span>{{content.text}}</p>
-            <div class="imgs">
+            <p class="content-title">{{content?.title}}</p>
+            <p [ngClass]="{'list': content?.secondTitle}"><span *ngIf="content?.secondTitle">{{content?.secondTitle}} - </span>{{content?.text}}</p>
+            <div class="imgs" *ngIf="content?.images">
                 <span *ngFor="let img of content?.images">
                     <img [src]="img?.url" />
                     <span>{{img.desc}}</span>

@@ -14,18 +14,21 @@
             font-family: 'Heebo';
             margin: 15px 0;
         }
+        .title {
+            font-size: 25px;
+        }
         .text,
         .date,
         .tags,
         .tag {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 400;
             font-family: 'Heebo', 'Open Sans',sans-serif;
             color: #757575;
             line-height: 25px;
         }
         .text {
-            font-size: 18px;
+            font-size: 15px;
             margin-top: 10px;
             font-family: 'Heebo', 'Open Sans',sans-serif;
             .list {
@@ -52,11 +55,27 @@
             margin-bottom: 15px;
         }
         .imgs {
+            padding: 20px 0 10px;
             display: flex;
+            justify-content: center;
+            align-items: center;
             img {
                 padding: 0 10px;
             }
-            // grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+
+@media (max-width: 700px) {
+    .post-page {
+        .post {
+            .imgs {
+                flex-direction: column;
+                img {
+                    padding: 0 10px;
+                }
+            }
         }
     }
 }
