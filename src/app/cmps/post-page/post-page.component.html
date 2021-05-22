@@ -10,7 +10,9 @@
         <div class="date">{{post.date | date:'mediumDate'}}</div>
         <div *ngFor="let content of post?.content" class="text">
             <p class="content-title">{{content?.title}}</p>
-            <p [ngClass]="{'list': content?.secondTitle}"><span *ngIf="content?.secondTitle">{{content?.secondTitle}} - </span>{{content?.text}}</p>
+            <p [ngClass]="{'list': content?.secondTitle}"><span *ngIf="content?.secondTitle">{{content?.secondTitle}} - </span>{{content?.text}}
+            <span *ngIf="content?.link"><a href="{{content?.link?.url}}" target="_blank">{{content?.link?.desc}}</a></span>
+            </p>
             <div class="imgs" *ngIf="content?.images">
                 <span class="img" *ngFor="let img of content?.images">
                     <img [src]="img?.url" />
