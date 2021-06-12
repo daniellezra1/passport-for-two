@@ -23,7 +23,7 @@ export class BlogPageComponent implements OnInit {
         )
       )
     ).subscribe(res => {
-      this.postList = [res[7], res[5], res[1], res[2]];
+      this.postList = [res[8], res[7], res[5], res[1], res[2]];
       this.selectedPostList = this.postList
     });
   }
