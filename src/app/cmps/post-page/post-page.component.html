@@ -1,24 +1,31 @@
 <div *ngIf="post" class="post-page">
-    <div class="post">
-        <img class="main-img" [src]="post?.mainImg"/>
-        <div class="tags">
-            <span class="tag" *ngFor="let tag of post?.tags; let i = index">{{tag}}
-                <span *ngIf="i !== post?.tags?.length - 1"> / </span>
-            </span>
-        </div>
-        <h1 class="title">{{post.title}}</h1>
-        <div class="date">{{post.date | date:'mediumDate'}}</div>
-        <div *ngFor="let content of post?.content" class="text">
-            <p class="content-title">{{content?.title}}</p>
-            <p [ngClass]="{'list': content?.secondTitle}"><span *ngIf="content?.secondTitle">{{content?.secondTitle}} - </span>{{content?.text}}
-            <span *ngIf="content?.link"><a href="{{content?.link?.url}}" target="_blank">{{content?.link?.desc}}</a></span>
-            </p>
-            <div class="imgs" *ngIf="content?.images">
-                <span class="img" *ngFor="let img of content?.images">
-                    <img [src]="img?.url" />
-                    <span>{{img.desc}}</span>
-                </span>
-            </div>
-        </div>
+  <div class="post">
+    <img class="main-img" [src]="post?.mainImg" />
+    <div class="tags">
+      <span class="tag" *ngFor="let tag of post?.tags; let i = index"
+        >{{ tag }}
+        <span *ngIf="i !== post?.tags?.length - 1"> / </span>
+      </span>
     </div>
+    <h1 class="title">{{ post.title }}</h1>
+    <div class="date">{{ post.date | date: "mediumDate" }}</div>
+    <div *ngFor="let content of post?.content" class="text">
+      <p class="content-title">{{ content?.title }}</p>
+      <p [ngClass]="{ list: content?.secondTitle }">
+        <span *ngIf="content?.secondTitle">{{ content?.secondTitle }} - </span
+        >{{ content?.text }}
+        <span *ngIf="content?.link"
+          ><a href="{{ content?.link?.url }}" target="_blank">{{
+            content?.link?.desc
+          }}</a></span
+        >
+      </p>
+      <div class="imgs" *ngIf="content?.images">
+        <span class="img" *ngFor="let img of content?.images">
+          <img [src]="img?.url" />
+          <span>{{ img.desc }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
