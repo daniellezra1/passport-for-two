@@ -1,8 +1,8 @@
-<main class="post-list" [ngClass]="{'blog-page': isBlogPage}">
-    <ng-container *ngFor="let post of postList; let i = index">
-        <post [post]="post"></post>
-    </ng-container>
+<main class="post-list" [ngClass]="{ 'blog-page': isBlogPage }">
+  <ng-container *ngFor="let post of postList; let i = index">
+    <post *ngIf="post.showPost" [post]="post"></post>
+  </ng-container>
 </main>
 <div class="coming-soon" *ngIf="postList && postList.length === 0">
-    Coming Soon
+  Coming Soon
 </div>

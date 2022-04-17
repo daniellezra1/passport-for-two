@@ -1,19 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'post-list',
   templateUrl: './post-list.component.html',
-  styleUrls: ['./post-list.component.scss']
+  styleUrls: ['./post-list.component.scss'],
 })
-export class PostListComponent implements OnInit {
+export class PostListComponent {
   @Input() postList = [];
   @Input() isBlogPage: boolean = false;
-
-
-  constructor() { }
-
-  ngOnInit(): void {
-
-  }
-
 }

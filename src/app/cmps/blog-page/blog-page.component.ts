@@ -26,8 +26,8 @@ export class BlogPageComponent implements OnInit {
           }))
         )
       )
-      .subscribe((res) => {
-        this.postList = [res[9], res[8], res[7], res[5], res[1], res[2]];
+      .subscribe((res: Post[]) => {
+        this.postList = res.sort((a, b) => b.date - a.date);
         this.selectedPostList = this.postList;
       });
   }

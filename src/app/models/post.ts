@@ -1,14 +1,15 @@
 interface Content {
-    title: string;
-    text: string;
-    images: string[];
+  title: string;
+  text: string;
+  images: string[];
 }
 
 export interface Post {
-    id: string;
-    title: string;
-    content: Content[];
-    date: Date;
-    tags: string[];
-    mainImg: string;
+  id: string;
+  title: string;
+  content: Content[];
+  date: Date | any;
+  tags: string[];
+  mainImg: string;
+  showPost: boolean;
 }

@@ -1,42 +1,58 @@
 <div class="filter">
-    <div class="filter-option" (click)="select()">
-        <div class="filter-img"></div>
-        <div class="filter-title">Latest Posts</div>
-    </div>
-    <div class="filter-option" (click)="select('usa')">
-        <div class="filter-img" [ngClass]="{'active': topic === 'usa'}"></div>
-        <div class="filter-title">USA</div>
-    </div>
-    <div class="filter-option" (click)="select('hawaii')">
-        <div class="filter-img" [ngClass]="{'active': topic === 'hawaii'}"></div>
-        <div class="filter-title">Hawaii</div>
-    </div>
-    <div class="filter-option" (click)="select('spain')">
-        <div class="filter-img" [ngClass]="{'active': topic === 'spain'}"></div>
-        <div class="filter-title">Spain</div>
-    </div>
-    <div class="filter-option" (click)="select('africa')">
-        <div class="filter-img" [ngClass]="{'active': topic === 'africa'}"></div>
-        <div class="filter-title">South Africa</div>
-    </div>
-    <div class="filter-option" (click)="select('kenya')">
-        <div class="filter-img" [ngClass]="{'active': topic === 'kenya'}"></div>
-        <div class="filter-title">Kenya</div>
-    </div>
-    <div class="filter-option" (click)="select('greece')">
-        <div class="filter-img" [ngClass]="{'active': topic === 'greace'}"></div>
-        <div class="filter-title">Greece</div>
-    </div>
-    <div class="filter-option" (click)="select('mexico')">
-        <div class="filter-img" [ngClass]="{'active': topic === 'mexico'}"></div>
-        <div class="filter-title">Mexico</div>
-    </div>
-    <div class="filter-option" (click)="select('dubai')">
-        <div class="filter-img" [ngClass]="{'active': topic === 'dubai'}"></div>
-        <div class="filter-title">Dubai</div>
-    </div>
-    <div class="filter-option" (click)="select('israel')">
-        <div class="filter-img" [ngClass]="{'active': topic === 'israel'}"></div>
-        <div class="filter-title">Israel</div>
-    </div>
+  <div class="filter-option" (click)="select()">
+    <div class="filter-img"></div>
+    <div class="filter-title">Latest Posts</div>
+  </div>
+  <div class="filter-option" (click)="select('israel')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'israel' }"></div>
+    <div class="filter-title">Israel</div>
+  </div>
+  <div class="filter-option" (click)="select('usa')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'usa' }"></div>
+    <div class="filter-title">USA</div>
+  </div>
+  <div class="filter-option" (click)="select('hawaii')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'hawaii' }"></div>
+    <div class="filter-title">Hawaii</div>
+  </div>
+  <div class="filter-option" (click)="select('spain')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'spain' }"></div>
+    <div class="filter-title">Spain</div>
+  </div>
+  <div class="filter-option" (click)="select('italy')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'italy' }"></div>
+    <div class="filter-title">Italy</div>
+  </div>
+  <div class="filter-option" (click)="select('england')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'england' }"></div>
+    <div class="filter-title">England</div>
+  </div>
+  <div class="filter-option" (click)="select('iceland')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'iceland' }"></div>
+    <div class="filter-title">Iceland</div>
+  </div>
+  <div class="filter-option" (click)="select('greece')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'greece' }"></div>
+    <div class="filter-title">Greece</div>
+  </div>
+  <div class="filter-option" (click)="select('georgia')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'georgia' }"></div>
+    <div class="filter-title">Georgia</div>
+  </div>
+  <div class="filter-option" (click)="select('africa')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'africa' }"></div>
+    <div class="filter-title">South Africa</div>
+  </div>
+  <div class="filter-option" (click)="select('kenya')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'kenya' }"></div>
+    <div class="filter-title">Kenya</div>
+  </div>
+  <div class="filter-option" (click)="select('mexico')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'mexico' }"></div>
+    <div class="filter-title">Mexico</div>
+  </div>
+  <div class="filter-option" (click)="select('dubai')">
+    <div class="filter-img" [ngClass]="{ active: topic === 'dubai' }"></div>
+    <div class="filter-title">Dubai</div>
+  </div>
 </div>
