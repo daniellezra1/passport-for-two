@@ -1,0 +1,25 @@
+[debug] [2022-04-17T16:27:54.664Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T16:27:54.666Z] Command:       /usr/local/bin/node /Users/danielletal/.npm-global/bin/firebase init
+[debug] [2022-04-17T16:27:54.666Z] CLI Version:   10.6.0
+[debug] [2022-04-17T16:27:54.666Z] Platform:      darwin
+[debug] [2022-04-17T16:27:54.666Z] Node Version:  v14.16.0
+[debug] [2022-04-17T16:27:54.668Z] Time:          Sun Apr 17 2022 19:27:54 GMT+0300 (Israel Daylight Time)
+[debug] [2022-04-17T16:27:54.668Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T16:27:54.719Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T16:27:54.720Z] > authorizing via signed-in user (daniellezra1@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/danielletal/Desktop/development/passport-for-two
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+

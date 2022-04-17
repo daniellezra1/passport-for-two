@@ -1,72 +1,86 @@
 .post {
-    margin-left: 20px;
-    margin-right: 20px;
-    direction: rtl;
-    text-align: center;
-    border-bottom: 1px solid #e4e4e4;
-    padding-bottom: 35px;
-    margin-bottom: 20px;
-    img {
-        width: 100%;
-        margin-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  direction: rtl;
+  text-align: center;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 35px;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .img-blog-page {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+  }
+  .header {
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .title {
+    color: #0a0a0a;
+    line-height: 32px;
+    font-size: 25px;
+    font-family: "Heebo", "Josefin";
+    margin: 10px 0 6px;
+  }
+  .text,
+  .date,
+  .tags,
+  .tag {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Heebo", "Open Sans", sans-serif;
+    color: #757575;
+    line-height: 25px;
+  }
+  .tags {
+    direction: ltr;
+  }
+  .tag {
+    display: inline-block;
+    margin-right: 4px;
+  }
+  button {
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 18px;
+    font-size: 11px;
+    padding: 8px 26px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 1px solid #757575;
+    color: #757575;
+    background-color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    &:hover {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      transition: 0.3s;
     }
-    .header {
-        min-height: 90px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-bottom: 15px;
-    }
-    .title {
-        color: #0a0a0a;
-        line-height: 32px;
-        font-size: 25px;
-        font-family: 'Heebo', 'Josefin';
-        margin: 10px 0 6px;
-    }
-    .text,
-    .date,
-    .tags,
-    .tag {
-        display: block;
-        font-size: 14px;
-        font-weight: 400;
-        font-family: 'Heebo', 'Open Sans',sans-serif;
-        color: #757575;
-        line-height: 25px;
-    }
-    .tags {
-        direction: ltr;
-    }
-    .tag {
-        display: inline-block;
-        margin-right: 4px;
-    }
-    button {
-        text-decoration: none;
-        text-transform: uppercase;
-        line-height: 18px;
-        font-size: 11px;
-        padding: 8px 26px;
-        margin-top: 10px;
-        cursor: pointer;
-        border: 1px solid #757575;
-        color: #757575;
-        background-color: #ffffff;
-        font-weight: 700;
-        letter-spacing: 1px;
-        display: inline-block;
-        &:hover {
-            background-color: #0a0a0a;
-            color: #ffffff;
-            transition: .3s;
-        }
-    }
+  }
 }
 
 @media (max-width: 700px) {
+  .post {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (max-width: 600px) {
     .post {
-        margin-left: 0;
-        margin-right: 0;
-        }
+      .img-blog-page {
+        height: 240px;
+      }
+    }
+  }
 }
